@@ -45,8 +45,6 @@ export async function fetchLatestInvoices() {
     }));
     return latestInvoices;
   } catch (error) {
-    console.log('Database Error:', error);
-    console.log('env var', process.env.POSTGRES_POSTGRES_URL)
     console.error('Database Error:', error);
     throw new Error('Failed to fetch the latest invoices.');
   }
